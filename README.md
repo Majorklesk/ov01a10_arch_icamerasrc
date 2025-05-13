@@ -15,6 +15,7 @@ cd ov08x40_arch
 sudo dkms add usbio-drivers/
 sudo dkms add ov08x40/
 sudo dkms autoinstall
+sudo cp ov08x40-uf.xml /etc/camera/ipu6epmtl/sensors/ov08x40-uf.xml
 cd v4l2-relayd
 makepkg -si
 sudo systemctl enable v4l2-relayd
