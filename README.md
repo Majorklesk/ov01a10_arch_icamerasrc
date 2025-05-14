@@ -3,8 +3,8 @@ Intel MIPI ov08x40 sensor driver for Arch Linux
 Install:
 ```
 sudo pacman -Sy git base-devel dkms linux-headers gst-plugin-libcamera pipewire-libcamera libcamera-tools libcamera-ipa v4l2loopback-dkms v4l2loopback-utils
-install:
 
+install the ipu6 icamerasrc drivers and software:
 - https://github.com/intel/ipu6-drivers - kernel drivers for the IPU and sensors
 - https://github.com/intel/ipu6-camera-bins - IPU firmware and proprietary image processing libraries
 - https://github.com/intel/ipu6-camera-hal - HAL for processing of images in userspace
