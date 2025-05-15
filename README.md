@@ -1,4 +1,4 @@
-Forked in order to support the OV01A10 sensor that is in my Dell Precision 5490. Previously camera has barely worked, suffering from low fps and barely and color, but after installing this it works as intended. Many thanks to @henkv1.
+Forked in order to support the OV01A10 sensor that is in my Dell Precision 5490. Previously the camera has barely worked and it suffered from low fps and barely any color, but after installing this it works as intended. Many thanks to @henkv1.
 
 Intel MIPI ov01a10 sensor driver for Arch Linux 
 
