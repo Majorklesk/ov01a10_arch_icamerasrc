@@ -22,7 +22,7 @@ endif
 export CONFIG_ICAMERA_OV01A10 = m
 EXTRA_CFLAGS += -O2 -std=gnu11 -Wno-declaration-after-statement
 
-obj-$(CONFIG_ICAMERA_OV08X40) += ov01a10.o
+obj-$(CONFIG_ICAMERA_OV01A10) += ov01a10.o
 
 ccflags-y += -D__CHECK_ENDIAN__
 
