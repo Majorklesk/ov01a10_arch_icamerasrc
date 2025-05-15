@@ -1,7 +1,7 @@
 SHELL := /bin/sh
 KVER ?= $(if $(KERNELRELEASE),$(KERNELRELEASE),$(shell uname -r))
 KSRC ?= $(if $(KERNEL_SRC),$(KERNEL_SRC),/lib/modules/$(KVER)/build)
-MODLIST := ov08x40
+MODLIST := ov01a10
 
 ifneq ("$(INSTALL_MOD_PATH)", "")
 DEPMOD_ARGS = -b $(INSTALL_MOD_PATH)
@@ -19,10 +19,10 @@ ifneq ("","$(wildcard $(MODDESTDIR)/*.ko.zst)")
 COMPRESS_ZSTD := y
 endif
 
-export CONFIG_ICAMERA_OV08X40 = m
+export CONFIG_ICAMERA_OV01A10 = m
 EXTRA_CFLAGS += -O2 -std=gnu11 -Wno-declaration-after-statement
 
-obj-$(CONFIG_ICAMERA_OV08X40) += ov08x40.o
+obj-$(CONFIG_ICAMERA_OV08X40) += ov01a10.o
 
 ccflags-y += -D__CHECK_ENDIAN__
 
@@ -48,7 +48,7 @@ uninstall:
 	@for mod in $(MODLIST); do \
 		rmmod -s $$mod || true; \
 	done
-	@rm -vf $(MODDESTDIR)/ov08x40.ko*
+	@rm -vf $(MODDESTDIR)/ov01a10.ko*
 	@depmod $(DEPMOD_ARGS)
 
 clean:
